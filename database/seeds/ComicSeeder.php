@@ -21,10 +21,11 @@ class ComicSeeder extends Seeder
         $comic_obj->title = $comic['title'];
         $comic_obj->description = $comic['description'];
         $comic_obj->thumb = $comic['thumb'];
-        $comic_obj->price = $comic['price'];
+        $comic_obj->price = intval($comic['price']);
         $comic_obj->series = $comic['series'];
         $comic_obj->sale_date = $comic['sale_date'];
         $comic_obj->type = $comic['type'];
+        $comic_obj->save();
         }
     }
 }
