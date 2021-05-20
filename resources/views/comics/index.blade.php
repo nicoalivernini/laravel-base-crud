@@ -13,7 +13,8 @@
             <div class="description-content">
               <p class="description">{{ $comic->description }}</p>
               <p class="price">Prezzo: {{ $comic->price }}€</p>
-              <span class="type">Tipologia: {{ $comic->type }}</span>
+              <span class="type">Tipologia: {{ $comic->type }}</span><br>
+              <span class="type">Serie: {{ $comic->series }}</span>
               <p class="date">{{ $comic->sale_date }}</p>
             </div>
           </a>
