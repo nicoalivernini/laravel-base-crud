@@ -11,6 +11,9 @@
           <p class="price">{{ $comic->price }}</p>
           <span class="date">{{ $comic->date }}</span>
           <span class="type">{{ $comic->type }}</span>
+          <a href="{{ route('comics.index' )}}">Torna indietro</a>
+          <a href="{{ route('home' )}}">Torna alla home</a>
+          <a href="{{ route('comics.create')}}">Crea il tuo fumetto</a>
         </a>
       </div>
     </div>

@@ -17,6 +17,8 @@
       </div>
     </div>
     @endforeach
+    <a href="{{ route('home' )}}">Torna alla home</a>
+    <a href="{{ route('comics.create')}}">Crea il tuo fumetto</a>
   </div>
 </main>
 @endsection
