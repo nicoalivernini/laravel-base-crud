@@ -3,22 +3,28 @@
 @section('main')
 <main>
   <div class="container">
-    @foreach($comics as $comic)
-    <div class="card">
-      <div class="content-card">
-        <a href="{{ route('comics.show', ['comic' => $comic->id])}}">
-          <img src="{{ $comic->thumb }}" alt="">
-          <h1>{{ $comic->title }}</h1>
-          <p class="description">{{ $comic->description }}</p>
-          <p class="price">{{ $comic->price }}</p>
-          <span class="date">{{ $comic->date }}</span>
-          <span class="type">{{ $comic->type }}</span>
-        </a>
+    <div class="cards">
+      @foreach($comics as $comic)
+      <div class="card">
+        <div class="content-card">
+          <a href="{{ route('comics.show', ['comic' => $comic->id])}}">
+            <img src="{{ $comic->thumb }}" alt="">
+            <h1>{{ $comic->title }}</h1>
+            <div class="description-content">
+              <p class="description">{{ $comic->description }}</p>
+              <p class="price">Prezzo: {{ $comic->price }}€</p>
+              <span class="type">Tipologia: {{ $comic->type }}</span>
+              <p class="date">{{ $comic->sale_date }}</p>
+            </div>
+          </a>
+        </div>
       </div>
+      @endforeach
     </div>
-    @endforeach
-    <a href="{{ route('home' )}}">Torna alla home</a>
-    <a href="{{ route('comics.create')}}">Crea il tuo fumetto</a>
+    <div class="container center">
+      <a href="{{ route('home' )}}"><button type="button" name="button">Torna alla Home</button></a>
+      <a href="{{ route('comics.create')}}"><button type="button" name="button">Crea il tuo fumetto</button></a>
+    </div>
   </div>
 </main>
 @endsection
