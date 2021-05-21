@@ -49,7 +49,8 @@ class ComicController extends Controller
       $comic_obj->type = $comic['type'];
       $comic_obj->save();
 
-      return redirect()->route('comics.index');
+
+      return redirect()->route('comics.show', $comic_obj->id);
     }
 
     /**
@@ -71,7 +72,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -83,7 +84,10 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+        $comic->update($data);
+
+        return redirect()->route('comics.show', compact('comic'));
     }
 
     /**
@@ -94,6 +98,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }
