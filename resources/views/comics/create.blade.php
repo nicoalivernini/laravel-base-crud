@@ -17,7 +17,6 @@
         <input type="submit" name="" value="Invia">
       </form>
       <a href="{{ route('home' )}}"><button type="button" name="button">Torna alla home</button></a>
-      <a href=""><button type="submit" name="button">Next lessons</button></a>
     </div>
   </div>
 </main>
