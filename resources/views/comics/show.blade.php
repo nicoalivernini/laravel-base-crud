@@ -16,16 +16,16 @@
       </div>
     </div>
   </div>
-  <div class="container center">
-    <form class="" action="{{ route('comics.destroy', ['comic' => $comic->id])}}" method="post">
+  <div class="container center flex">
+    <a href="{{ route('comics.index') }}"><button type="button" name="button">Torna indietro</button></a>
+    <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><button type="button" name="button">Modifica</button></a>
+    <a href="{{ route('comics.create') }}"><button type="button" name="button">Crea il tuo fumetto</button></a>
+    <form class="form-delete" action="{{ route('comics.destroy', ['comic' => $comic->id])}}" method="post">
       @csrf
       @method('DELETE')
       <input type="submit" name="" value="Cancella">
     </form>
-    <a href="{{ route('comics.index') }}"><button type="button" name="button">Torna indietro</button></a>
-    <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><button type="button" name="button">Modifica</button></a>
     <a href="{{ route('home') }}"><button type="button" name="button">Torna alla Home</button></a>
-    <a href="{{ route('comics.create') }}"><button type="button" name="button">Crea il tuo fumetto</button></a>
   </div>
 </main>
 @endsection

@@ -85,10 +85,33 @@
 }
 //Button Index
 .container {
+  &.flex {
+    display: flex;
+    justify-content: center;
+  }
+  form {
+    &.form-delete{
+      input {
+        padding: 20px 25px;
+        border: 1px solid #2f596d;
+        background-color: #2f596d;
+        border-radius: 10px;
+        color: white;
+        text-transform: uppercase;
+        margin: 15px 10px;
+        &:hover {
+          cursor: pointer;
+          color: #2f596d;
+          background-color: white;
+          border: 1px solid #2f596d;
+        }
+      }
+    }
+  }
   a {
     button {
       padding: 20px 25px;
-      border: none;
+      border: 1px solid #2f596d;
       background-color: #2f596d;
       border-radius: 10px;
       color: white;
@@ -96,6 +119,9 @@
       margin: 15px 10px;
       &:hover {
         cursor: pointer;
+        color: #2f596d;
+        background-color: white;
+        border: 1px solid #2f596d;
       }
     }
   }
@@ -162,6 +188,19 @@
         border: 1px solid #b3b8bb;
         border-radius: 5px;
         margin: 5px;
+        &:last-child {
+          padding: 20px 25px;
+          border: none;
+          background-color: #2f596d;
+          border-radius: 10px;
+          color: white;
+          text-transform: uppercase;
+          margin: 10px 10px;
+          &:hover {
+            cursor: pointer;
+            background-color: #5e99ae;
+          }
+        }
       }
     }
   }
