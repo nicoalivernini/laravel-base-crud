@@ -192,6 +192,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.container .content-form .alert-danger ul {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.container .content-form .alert-danger ul li {
+  color: red;
+  font-style: italic;
+  font-weight: 600;
+}
+
 .container .content-form form input {
   padding: 10px;
   border: 1px solid #b3b8bb;
