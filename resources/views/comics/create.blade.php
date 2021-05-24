@@ -4,6 +4,17 @@
 <main>
   <div class="container fix-height">
     <div class="content-form">
+      
+      @if ($errors->any())
+       <div class="alert alert-danger">
+         <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+          @endif
+
       <form class="" action="{{ route('comics.store')}}" method="post">
         @csrf
         @method('POST')
